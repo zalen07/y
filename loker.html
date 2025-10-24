@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lowongan Kerja - Portal Karir</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: #f5f7fa;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      header {
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        color: white;
+        padding: 2rem 0;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 0;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        opacity: 0.9;
+      }
+
+      .search-bar {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+        display: flex;
+        gap: 1rem;
+      }
+
+      .search-bar input {
+        flex: 1;
+        padding: 0.8rem 1rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+      }
+
+      .search-bar button {
+        background: #2a5298;
+        color: white;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background 0.3s;
+      }
+
+      .search-bar button:hover {
+        background: #1e3c72;
+      }
+
+      .job-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .job-card {
+        background: white;
+        border-radius: 10px;
+        padding: 1.5rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .job-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+      }
+
+      .job-title {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+        color: #2a5298;
+      }
+
+      .company {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: #555;
+      }
+
+      .location {
+        color: #777;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+      }
+
+      .location:before {
+        content: "📍";
+        margin-right: 5px;
+      }
+
+      .job-type {
+        display: inline-block;
+        background: #e9f0ff;
+        color: #2a5298;
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
+
+      .job-description {
+        margin-bottom: 1.5rem;
+        color: #555;
+      }
+
+      .apply-btn {
+        background: #2a5298;
+        color: white;
+        border: none;
+        padding: 0.7rem 1.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        width: 100%;
+        transition: background 0.3s;
+      }
+
+      .apply-btn:hover {
+        background: #1e3c72;
+      }
+
+      footer {
+        background: #1e3c72;
+        color: white;
+        text-align: center;
+        padding: 2rem 0;
+        margin-top: 3rem;
+      }
+
+      .special-message {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .moon {
+        color: #87ceeb;
+        font-size: 2rem;
+        animation: moonGlow 2s infinite alternate;
+      }
+
+      @keyframes moonGlow {
+        from {
+          text-shadow: 0 0 5px #87ceeb;
+        }
+        to {
+          text-shadow: 0 0 15px #87ceeb, 0 0 20px #87ceeb;
+        }
+      }
+
+      .copyright {
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+
+      @media (max-width: 768px) {
+        .search-bar {
+          flex-direction: column;
+        }
+
+        .job-list {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Portal Lowongan Kerja</h1>
+        <p class="subtitle">Temukan pekerjaan impian Anda di sini</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="search-bar">
+        <input
+          type="text"
+          placeholder="Cari pekerjaan, perusahaan, atau kata kunci..."
+        />
+        <button>Cari</button>
+      </div>
+
+      <div class="job-list">
+        <div class="job-card">
+          <h2 class="job-title">Frontend Developer</h2>
+          <p class="company">Tech Solutions Inc.</p>
+          <p class="location">Jakarta, Indonesia</p>
+          <span class="job-type">Full-time</span>
+          <p class="job-description">
+            Kami mencari frontend developer berpengalaman dengan keahlian dalam
+            HTML, CSS, dan JavaScript. Bergabunglah dengan tim dinamis kami
+            untuk mengembangkan aplikasi web yang inovatif.
+          </p>
+          <button class="apply-btn">Lamar Sekarang</button>
+        </div>
+
+        <div class="job-card">
+          <h2 class="job-title">Digital Marketing Specialist</h2>
+          <p class="company">Creative Agency Co.</p>
+          <p class="location">Bandung, Indonesia</p>
+          <span class="job-type">Full-time</span>
+          <p class="job-description">
+            Kami mencari spesialis pemasaran digital yang kreatif dan
+            berpengalaman untuk mengelola kampanye iklan dan strategi media
+            sosial untuk klien kami.
+          </p>
+          <button class="apply-btn">Lamar Sekarang</button>
+        </div>
+
+        <div class="job-card">
+          <h2 class="job-title">Data Analyst</h2>
+          <p class="company">Data Insights Ltd.</p>
+          <p class="location">Surabaya, Indonesia</p>
+          <span class="job-type">Part-time</span>
+          <p class="job-description">
+            Bergabunglah dengan tim analisis data kami untuk membantu perusahaan
+            membuat keputusan berbasis data. Pengalaman dengan SQL dan Python
+            diperlukan.
+          </p>
+          <button class="apply-btn">Lamar Sekarang</button>
+        </div>
+
+        <div class="job-card">
+          <h2 class="job-title">UI/UX Designer</h2>
+          <p class="company">Design Studio Pro</p>
+          <p class="location">Remote</p>
+          <span class="job-type">Contract</span>
+          <p class="job-description">
+            Kami mencari desainer UI/UX berbakat untuk menciptakan pengalaman
+            pengguna yang luar biasa untuk aplikasi web dan mobile kami.
+          </p>
+          <button class="apply-btn">Lamar Sekarang</button>
+        </div>
+
+        <div class="job-card">
+          <h2 class="job-title">Customer Service Representative</h2>
+          <p class="company">Service Excellence Corp.</p>
+          <p class="location">Bali, Indonesia</p>
+          <span class="job-type">Full-time</span>
+          <p class="job-description">
+            Kami mencari perwakilan layanan pelanggan yang ramah dan
+            berorientasi pada solusi untuk membantu pelanggan kami dengan
+            pertanyaan dan masalah mereka.
+          </p>
+          <button class="apply-btn">Lamar Sekarang</button>
+        </div>
+
+        <div class="job-card">
+          <h2 class="job-title">Backend Developer</h2>
+          <p class="company">Server Solutions</p>
+          <p class="location">Yogyakarta, Indonesia</p>
+          <span class="job-type">Full-time</span>
+          <p class="job-description">
+            Bergabunglah dengan tim backend kami untuk mengembangkan API yang
+            kuat dan sistem server yang andal. Pengalaman dengan Node.js dan
+            database diperlukan.
+          </p>
+          <button class="apply-btn">Lamar Sekarang</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="special-message">
+          <span class="moon">🌙</span>
+          <span>HALO DEKA MANIS dari zalen</span>
+          <span class="moon">🌙</span>
+        </div>
+        <p class="copyright">
+          © 2025 Portal Lowongan Kerja. Semua hak dilindungi.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
